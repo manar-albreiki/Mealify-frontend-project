@@ -1,0 +1,588 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+}
+
+  /* nav style*/
+nav {
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    font-family: "open sans";
+    box-shadow: 0px 0px 14px 0px #0000001b;
+}
+
+nav h2 {
+    font-size: 45px;
+    color: #37373F;
+    font-weight: bold;
+}
+
+nav h2::after {
+    content: ".";
+    color: red;
+}
+
+nav a {
+    font-size: 20px;
+    font-weight: 800;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    transition: all 0.5s;
+}
+  /* home style*/
+
+
+.Home {
+    background-color: #EEEEEE;
+    
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.Home-page {
+    display: flex;
+    align-items: center;
+}
+
+.home-details h1 {
+    color: #37373F;
+    font-size: 65px;
+    font-family: "Amatic SC", sans-serif;
+}
+
+.home-details p {
+    margin: 30px 0;
+    color: #7F7F90;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.home-image img:hover {
+    animation: moveLeftRight 0.2s linear infinite alternate;
+}
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+
+.table-btn {
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 0 100vh 100vh;
+    border: none;
+}
+
+.video-button {
+    display: flex;
+    align-items: center;
+    transition: all 0.8s;
+    color: black;
+}
+
+.video-button .icon {
+    width: 55px;
+    height: 55px;
+    background-image: linear-gradient(to right, red 0% 50%, transparent 50% 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.video-button .icon::after {
+    content: "";
+    position: absolute;
+    inset: 7.5px; /* يوسّط الدائرة تلقائياً */
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1; /* خلف الأيقونة */
+}
+
+.video-button .icon  {
+    color: black;
+    font-size: 16px;
+}
+
+.video-button:hover {
+    color: red;
+}
+
+.video-button:hover .icon  {
+    color: red;
+}
+
+  /* chefs style*/
+
+.title-chifes {
+    text-align: center;
+    padding: 20px;
+}
+
+.title-chifes h3 {
+    font-size: 16px;
+    color: #7F7F90;
+    font-weight: bold;
+}
+
+.title-chifes h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 40px;
+}
+
+.title-chifes span {
+    color: red;
+}
+
+.cards-chefs {
+    transition: all 1s;
+}
+
+.card-chef1,
+.card-chef2,
+.card-chef3 {
+    width: 33.3333333%;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-chef1:hover,
+.card-chef2:hover,
+.card-chef3:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-body h3 {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: "open sans";
+}
+
+.card-body,
+.card-body p {
+    font-size: 16px;
+    font-family: "open sans";
+}
+
+.Chefs img {
+    position: relative;
+    overflow: hidden;
+}
+
+.social {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.425);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    border-radius: 5px;
+
+}
+
+.social a {
+    width: 45px;
+    height: 45px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+
+
+.card-chef1:hover .social,
+.card-chef2:hover .social,
+.card-chef3:hover .social {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+  /* gallery style*/
+.Gallery {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.Gallery-title h3 {
+    font-size: 16px;
+}
+.Gallery-pic img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    border: #fff solid 5px;
+}
+
+
+.Gallery-pic {
+    position: relative;
+    overflow: hidden;
+}
+
+.pic-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s ease;
+}
+
+.Gallery-pic:hover img {
+    transform: scale(1.1);
+}
+
+.Gallery-pic:hover .pic-layer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pic-layer h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.pic-layer p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+
+  /* contact style*/
+.contact-title h2 {
+    font-size: 16px;
+    color: #7f7f90;
+    text-align: center;
+}
+
+.contact-title h3 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.contact-title span {
+    color: red;
+}
+
+.contact-map {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.contact-map iframe {
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    border-width: 0px;
+    margin: 0px;
+    left: 0px;
+    top: 0px;
+}
+
+.contact-info h3 {
+    font-size: 19px;
+}
+
+.contact-info p {
+    font-size: 16px;
+}
+
+.form {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.form button {
+    margin: 20px auto;
+    padding: 15px 25px;
+    color: white;
+    font-size: 16px;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 25px;
+    justify-content: center;
+}
+
+
+  /* footer style*/
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer-title {
+    display: flex;
+
+}
+
+.footer-title img {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.footer-part1 p {
+    text-align: left;
+
+}
+
+.social-media h3 {
+    padding: 10px;
+    font-size: 25px;
+    border-bottom: white solid 3px;
+}
+
+.footer-ic a {
+
+    justify-content: space-around;
+    margin: 20px 10px;
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.footer-part2 h2 {
+    font-size: 24px;
+    text-align: left;
+}
+
+.footer-part2 p {
+    text-align: left;
+    font-size: 16px;
+}
+
+.links ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 20px;
+}
+                
+.footer-form button {
+    background-color: red;
+    color: white;
+}
+
+.footer-part3 h3 {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.footer-part3 ul {
+    padding: 0;
+}
+
+.footer-part3 ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+footer .footer-part3 ul li i {
+  font-size: 24px;
+  color: red;
+  margin-right: 10px;
+}
+
+
+
+
+
+/* --- Dark Mode للـ Navbar + Header + Sections + Footer --- */
+body:has(#darkToggle:checked),
+body:has(#darkToggle:checked) header,
+body:has(#darkToggle:checked) section,
+body:has(#darkToggle:checked) footer,
+body:has(#darkToggle:checked) nav.navbar {
+    background-color: #000 !important; /* كل الخلفيات سوداء */
+    color: #fff !important;           /* كل الخطوط بيضاء */
+    transition: all 0.4s;
+}
+
+/* Navbar links */
+body:has(#dark-mode-toggle:checked) nav.navbar .nav-link,
+body:has(#dark-mode-toggle:checked) nav.navbar .navbar-brand {
+    color: #fff !important;
+}
+/* Navbar */
+body:has(#darkToggle:checked) nav.navbar {
+    background-color: #1A1A1A !important;
+}
+body:has(#darkToggle:checked) nav.navbar .nav-link,
+body:has(#darkToggle:checked) .Home p,
+body:has(#darkToggle:checked) .Home h1,
+body:has(#darkToggle:checked) nav.navbar h2 {
+    color: #fff !important;
+}
+body:has(#darkToggle:checked) nav h2::after {
+    content: ".";
+    position: absolute;
+    color: #C17E1F !important;
+}
+
+/* الأزرار */
+body:has(#darkToggle:checked) .btn,
+body:has(#darkToggle:checked) button,
+body:has(#darkToggle:checked) .table-btn {
+    background-color: #C17E1F !important;
+    border-color: #C17E1F !important;
+    color: #000 !important;
+}
+
+body:has(#darkToggle:checked) .video-button {
+   color: white; 
+}
+body:has(#darkToggle:checked) .video-button .icon {
+
+    background-image: linear-gradient(to right, #C17E1F 0% 50%, transparent 50% 100%); 
+}
+body:has(#darkToggle:checked) .video-button .icon::after {
+   background-color: #1A1A1A;
+}
+
+body:has(#darkToggle:checked) .video-button .icon  {
+   color: white !important;
+}
+
+body:has(#darkToggle:checked) .video-button:hover {
+    color: #C17E1F;
+}
+
+
+body:has(#darkToggle:checked) .video-button:hover .icon  {
+    color: #C17E1F !important;
+}
+
+
+
+/* أيقونات */
+body:has(#darkToggle:checked) i,
+body:has(#darkToggle:checked) .icon {
+    color: #C17E1F !important;
+}
+
+body:has(#darkToggle:checked) span {
+    color: #C17E1F !important;
+}
+body:has(#darkToggle:checked) .contact .contact-info .contact-details .contact-icon {
+    background-color: #C17E1F !important;
+    color: white !important;
+}
+
+body:has(#darkToggle:checked) footer .footer-part3 ul li i {
+    color: #C17E1F !important; /* اللون البرتقالي */
+}
+
+
+/* بطاقات الشيف */
+body:has(#darkToggle:checked) .card-chef1,
+body:has(#darkToggle:checked) .card-chef2,
+body:has(#darkToggle:checked) .card-chef3,
+body:has(#darkToggle:checked) .card-body,
+body:has(#darkToggle:checked) .chef-card {
+    background-color: #1A1A1A !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+/* input و textarea */
+body:has(#darkToggle:checked) input,
+body:has(#darkToggle:checked) textarea {
+    background-color: #1A1A1A !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+}
+
+/* placeholder */
+body:has(#darkToggle:checked) input,
+body:has(#darkToggle:checked) textarea {
+    background-color: white !important;
+}
+
+/* Navbar toggle icon (شمس وقمر) */
+.dark-btn .moon {
+    visibility: hidden;
+}
+body:has(#darkToggle:checked) .dark-btn .sun {
+    visibility: hidden;
+}
+body:has(#darkToggle:checked) .dark-btn .moon {
+    visibility: visible;
+}
+
+/* انتقال سلس */
+body, nav, footer, a, .card-chef1, .card-chef2, .card-chef3, .btn, button {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body:has(#darkToggle:checked) .contact .contact-info .contact-details {
+    background-color: black !important;
+}
+
+body:has(#darkToggle:checked) .contact .contact-info .contact-details h3 {
+    color: #ADADAD;
+}
